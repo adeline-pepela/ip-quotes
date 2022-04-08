@@ -1,12 +1,21 @@
-<div>
-    <h3> Quotes</h3>
-    <ul *ngFor="let quote of quotes">
-        <li>
-            {{quote.name}}
-            <!-- <app-quote-detail [quote]="quote"></app-quote-detail> -->
-        </li>
-    </ul>
-    <p *ngIf="quotes.length>4"> Your quotes are many</p>
+<div class="overlay">
+    <h3 class="my-3 p-3 text-center" > Best programming Quotes</h3>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6"> 
+          <ul *ngFor="let quote of quotes">
+            <li>
+                {{quote.name}}
+                 <app-quote-detail [quote]="quote"></app-quote-detail> 
+              </li>
+        </ul>
+      </div> 
+      <div class="col-md-6">
+        <app-quote-form></app-quote-form>
+      </div>
+    </div>
+    
+    
 </div>
 
 
