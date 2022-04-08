@@ -8,15 +8,36 @@ import { QuoteFormComponent } from '../quote-form/quote-form.component';
 })
 export class QuoteComponent implements OnInit {
 quotes:Quote[]=[
-  // new Quote(1, 'Martin Fowler')
-  // {id:1,name:'Martin Fowler, description:"“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”"},
-  // {id:2,name:"John Johnson " , description: "“First, solve the problem. Then, write the code.” "},
-  // {id:3,name:"Coco Chanel" , description: "In order to be irreplaceable, one must always be different"},
-  // {id:4,name:"Chris Heilmann" , description: "“Java is to JavaScript what car is to Carpet.” "},
-  // {id:5,name:"Dan Salomon" , description:"“Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code.”"},
-  // {id:6,name:"Kent Beck", description:"“Make it work, make it right, make it fast.” "},
-  new Quote (7,'Alfred','For a list of all the ways technology has failed to improve the quality of life, please press three.','Alice Kahn')
-]
+  new Quote(1, 'Joy','Any fool can write code that a computer can understand. Good programmers write code that humans can understand.','Martin Fowler'),
+  new Quote(2,'Amalia', 'First, solve the problem. Then, write the code.','John Johnson'),
+  new Quote(3,'Jemmy','In order to be irreplaceable, one must always be different','Coco Chanel'),
+  new Quote(4,'Avatar','Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Mondays code.','Dan Salomon'),
+];
+
+// get sortQuotes() {
+//   return this.quotes.sort((a, b) => {
+//     return <any>new Date(b.datePosted) - <any>new Date(a.datePosted);
+//   });
+// }  
+// addedQuote(quote){
+//   let arraysize = this.quotes.length;
+//   quote.id = arraysize+1;
+//   quote.completeDate = new Date(quote.completeDate)
+//   this.quotes.push(quote)
+// }
+// quoteDelete(isRead, index){
+//   if (isRead) {
+//     let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+//     if(toDelete){
+//       this.quotes.splice(index,1);
+//     }
+    
+//   }
+// }
+
+// displayInfo(index){
+//   this.quotes[index].showInfo = !this.quotes[index].showInfo;
+// }
   constructor() { }
 
   ngOnInit(): void {
