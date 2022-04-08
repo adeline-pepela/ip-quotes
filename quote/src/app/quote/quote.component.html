@@ -1,1 +1,9 @@
-<p>quote works!</p>
+<div>
+    <h3> Quotes</h3>
+    <ul *ngFor="let quote of quotes">
+        <li>
+            {{quote.name}}
+        </li>
+    </ul>
+    <p *ngIf="quotes.length>4"> Your quotes are many</p>
+</div>
