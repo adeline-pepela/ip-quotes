@@ -3,13 +3,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6"> 
-          <ul *ngFor="let quote of quotes">
+          <ul *ngFor="let quote of quotes;let i = index">
             <li>
                 {{quote.name}}
-                <app-quote-detail [quote]="quote"></app-quote-detail> 
-                
-            
+
+                 <app-quote-detail *ngIf="quote.showDescription" [quote]="quote"></app-quote-detail>  
               </li>
+              <button (click)="toggleDescription(i)" type="button" class="btn btn-primary">See More!!</button>
         </ul>
       </div> 
       <div class="col-md-6">

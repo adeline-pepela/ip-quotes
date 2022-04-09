@@ -7,11 +7,16 @@ import { QuoteFormComponent } from '../quote-form/quote-form.component';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  toggleDescription (index){
+    this.quotes[index].showDescription=!this.quotes[index].showDescription
+  }
 quotes:Quote[]=[
   new Quote(1, 'Joy','Any fool can write code that a computer can understand. Good programmers write code that humans can understand.','Martin Fowler'),
   new Quote(2,'Amalia', 'First, solve the problem. Then, write the code.','John Johnson'),
   new Quote(3,'Jemmy','In order to be irreplaceable, one must always be different','Coco Chanel'),
   new Quote(4,'Avatar','Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Mondays code.','Dan Salomon'),
+
+  
 ];
 
 // get sortQuotes() {
