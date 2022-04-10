@@ -7,7 +7,9 @@ import { QuoteFormComponent } from '../quote-form/quote-form.component';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  toggleDescription (index){} 
+  toggleDescription(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 quotes:Quote[]=[
   new Quote(1, 'Joy','Any fool can write code that a computer can understand. Good programmers write code that humans can understand.','Martin Fowler', new Date(2020,7,24),0,0 ),
   new Quote(2,'Amalia', 'First, solve the problem. Then, write the code.','John Johnson', new Date(2020,7,24),0,0 ),
@@ -26,26 +28,26 @@ quotes:Quote[]=[
   //     return <any>new Date(b.datePosted) - <any>new Date(a.datePosted);
   //   });
   // } 
-   
-  addedQuote(quote){
-   let arraysize = this.quotes.length;
-  quote.id = arraysize+1;
-  quote.completeDate = new Date(quote.completeDate)
-  this.quotes.push(quote)
-   }
-  quoteDelete(isRead, index){
-    if (isRead) {
-      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
-      if(toDelete){
-        this.quotes.splice(index,1);
-      }
+
+  // addedQuote(quote){
+  //  let arraysize = this.quotes.length;
+  // quote.id = arraysize+1;
+  // quote.completeDate = new Date(quote.completeDate)
+  // this.quotes.push(quote)
+  //  }
+  // quoteDelete(isRead, index){
+  //   if (isRead) {
+  //     let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+  //     if(toDelete){
+  //       this.quotes.splice(index,1);
+  //     }
       
-    }
-  }
+  //   }
+  // }
  
-  displayInfo(index){
-    this.quotes[index].showDescription= !this.quotes[index].showDescription;
-   }
+  // displayInfo(index){
+  //   this.quotes[index].showDescription= !this.quotes[index].showDescription;
+  //  }
 
   constructor() { }
 

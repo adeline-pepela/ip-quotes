@@ -19,7 +19,7 @@ export class QuoteFormComponent implements OnInit {
   newQuote:any
   
   
-  submitQuotes(){
+  addQuote(){
     this.newQuote=new Quote (this.quoteId ,this.quoteName,this.quoteDescription,this.quoteAuthor, this.quoteDate, this.quoteLikes,this.quoteDislikes);
     
     this.quoteName=''

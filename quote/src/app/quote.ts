@@ -9,6 +9,7 @@ export class Quote {
    public dislikes:number,){
    this.likes=0;
    this.dislikes=0;
+  //  this.showDescription=false
    }
 }
 

@@ -3,20 +3,22 @@
     <div class="container-fluid">
       <div class="row" >
          <div class="col-md-6">  
-          <div *ngFor="let quote of quotes;let i = 'index'" class="card" style="width: 24px;">
+          <div *ngFor="let quote of quotes ;let i=index" class="card" style="width: 500px;">
             <ul>
-            <li>
-                {{quote.name}}
-
-                  <app-quote-detail *ngIf="quote.showDescription" [quote]="quote"></app-quote-detail>   
-              </li>
-              <button (click)="toggleDescription(i)" type="button" class="btn btn-primary">See More!!</button>
+            <p>
+              {{quote.name}}
+              <app-quote-detail *ngIf="quote.showDescription" [quote]="quote" ></app-quote-detail> 
+            </p>
+             
+               <button (click)="toggleDescription(i)" type="button" class="btn btn-primary">See More!!</button> 
         </ul>
+        
+
       </div> 
       </div>    
-      <div class="col-md-6">
+       <div class="col-md-6">
         <app-quote-form></app-quote-form>
-      </div>
+      </div> 
     
 </div>
 </div>   
