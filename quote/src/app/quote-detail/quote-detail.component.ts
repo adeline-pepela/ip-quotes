@@ -11,12 +11,12 @@ export class QuoteDetailComponent implements OnInit {
   deleteQuote(read:boolean){
    this.isRead.emit(read);
    }
-//  upvote(){
-//  this.quote.likes+=1;
-//  }
-//  downvote(){
-//   this.quote.dislikes+=1;
-//  }
+ upvote(index){
+this.quote[index].likes++;
+ }
+ downvote(index){
+ this.quote[index].dislikes++;
+ }
 
   constructor() { }
 

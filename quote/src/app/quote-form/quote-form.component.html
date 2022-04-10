@@ -4,22 +4,26 @@
      <hr> 
          <div class="form-group"> 
            <label for="name">Your Name</label> 
-           <input type="text" required class="form-control">
+           <input type="text" required class="form-control" id="name" [(ngModel)]="quoteName" #name="ngModel">
            
              
          <div class="form-group"> 
           <label for="description">Quote</label> 
-          <input type="text"required class="form-control">
+          <input type="text"required class="form-control" id="name" [(ngModel)]="quoteDescription" #name="ngModel">
         </div> 
+
         <div class="form-group">
           <label for="name">Quote Author</label>
-          <input type="text"required class="form-control">
+          <input type="text"required class="form-control"  id="name" [(ngModel)]="quoteAuthor" #name="ngModel">
             </div>
            </div> 
         
          <button type="submit" class="btn btn-sm btn-success">Add Quote</button>  
 </div>
 </form>
+
+
+
 <!-- 
 <form (ngSubmit)='addQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
     <div class="form-group">
