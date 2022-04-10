@@ -6,7 +6,7 @@
           <div *ngFor="let quote of quotes ;let i=index" class="card" style="width: 500px;">
             <ul>
             <p>
-              {{quote.name}}
+              {{quote.author}}
               <app-quote-detail *ngIf="quote.showDescription" [quote]="quote" ></app-quote-detail> 
             </p>
              

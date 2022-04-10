@@ -5,12 +5,12 @@
   #del{
     float:right;
   }
-  #like{
+  /* #likes{
     font-size: 16px;
   }
-  #dislike{
+  #dislikes{
     font-size: 16px;
-  }
+  } */
   .hate{
     margin-left: 10px;
     background-color: brown;
