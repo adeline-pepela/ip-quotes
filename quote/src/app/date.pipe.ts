@@ -19,7 +19,7 @@ transform(value: any): number {
   var dateDifferenceSeconds=dateDifference*0.001; 
   var dateCounter = dateDifferenceSeconds/secondsInADay;
 
-  if (dateCounter >= 1 && todayWithNoTime > value){
+  if (dateCounter >= 1 && todayWithNoTime>value){
       return dateCounter;
   }else{
       return 0;

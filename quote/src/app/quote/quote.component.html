@@ -6,18 +6,18 @@
           <div *ngFor="let quote of quotes ;let i=index" class="card" style="width: 500px;">
             <ul>
             <p>
-              {{quote.author}}
+              Posted by:    {{quote.name}} 
               <app-quote-detail *ngIf="quote.showDescription" [quote]="quote" ></app-quote-detail> 
             </p>
-             
-               <button (click)="toggleDescription(i)" type="button" class="btn btn-primary">See More!!</button> 
+            
+               <button (click)="toggleDescription(i)" type="button" class="btn btn-primary">See More</button> 
         </ul>
         
 
       </div> 
       </div>    
        <div class="col-md-6">
-        <app-quote-form></app-quote-form>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div> 
     
 </div>

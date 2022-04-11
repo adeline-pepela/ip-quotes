@@ -7,28 +7,29 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
+  newQuote= new Quote(0, "","","",new Date(),0,0 )
+  @Output() addQuotes=new EventEmitter<Quote>();
+  quoteSubmit(){this.addQuotes.emit(this.newQuote)}
+  // quoteId:number
+  // quoteName:string
+  // quoteDescription:string
+  // quoteAuthor:string
+  // quoteDate:Date;
+  // quoteLikes:number;
+  // quoteDislikes:number;
+  // newQuote:any
   
-  @Output() emitQuotes=new EventEmitter<Quote>();
-  quoteId:number
-  quoteName:string
-  quoteDescription:string
-  quoteAuthor:string
-  quoteDate:Date;
-  quoteLikes:number;
-  quoteDislikes:number;
-  newQuote:any
   
-  
-  addQuote(){
-    this.newQuote=new Quote (this.quoteId ,this.quoteName,this.quoteDescription,this.quoteAuthor, this.quoteDate, this.quoteLikes,this.quoteDislikes);
+  // addQuote(){
+  //   this.newQuote=new Quote (this.quoteId ,this.quoteName,this.quoteDescription,this.quoteAuthor, this.quoteDate, this.quoteLikes,this.quoteDislikes);
     
-    this.quoteName=''
-    this.quoteDescription=''
-    this.quoteAuthor=''
-    this.quoteLikes=0
-    this.quoteDislikes=0
-    this.emitQuotes.emit(this.newQuote);
-  }
+  //   this.quoteName=''
+  //   this.quoteDescription=''
+  //   this.quoteAuthor=''
+  //   this.quoteLikes=0
+  //   this.quoteDislikes=0
+  //   this.emitQuotes.emit(this.newQuote);
+  // }
   constructor() { }
 
   ngOnInit(): void {

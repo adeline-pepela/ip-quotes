@@ -1,4 +1,7 @@
 export class Quote {
+  splice(index: any, arg1: number) {
+    throw new Error('Method not implemented.');
+  }
   showDescription: boolean;
   constructor( public id:number,
    public name:string,
@@ -9,7 +12,7 @@ export class Quote {
    public dislikes:number,){
    this.likes=0;
    this.dislikes=0;
-  //  this.showDescription=false
+  this.showDescription=false
    }
 }
 
