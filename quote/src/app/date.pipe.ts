@@ -4,12 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'date'
 })
 export class DatePipe implements PipeTransform {
-
-//   transform(value: unknown, ...args: unknown[]): unknown {
-//     return null;
-//   }
-
-// }
 transform(value: any): number {
   let today:Date = new Date();
   let todayWithNoTime:any = new Date(today.getFullYear(),today.getMonth(),today.getDate())
